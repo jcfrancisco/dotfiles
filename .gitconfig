@@ -1,0 +1,27 @@
+[user]
+	name = Carlo Francisco
+	email = carlo@groupon.com
+[push]
+  default = tracking
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[core]
+	excludesfile = /Users/carlo/.gitignore_global
+  autocrlf = input
+  editor = mvim -v
+[alias]
+  c = commit -m
+  a = add
+  di = diff
+  dic = diff --cached
+  pl = pull
+  ps = push
+  plre = pull --rebase
+  st = status
+  out = log origin..HEAD
+  b = branch
+  st = status
+  co = checkout
+  lg  = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative
