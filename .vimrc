@@ -25,17 +25,14 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-scripts/VimClojure'
+Bundle 'wavded/vim-stylus'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'tpope/vim-fireplace'
+Bundle 'guns/vim-clojure-highlight'
+" Bundle 'tpope/vim-classpath'
 
 "Colors!
-Bundle 'vim-scripts/desert256.vim'
-":colorscheme desert256
-Bundle 'ciaranm/inkpot'
-":colorscheme inkpot
-Bundle 'vim-scripts/256-grayvim'
-":colorscheme 256-grayvim
-Bundle 'vim-scripts/The-Vim-Gardener'
-":colorscheme gardener
 Bundle 'altercation/vim-colors-solarized'
 colorscheme solarized
 if has('gui_running')
@@ -84,12 +81,6 @@ set guifont=Panic\ Sans:h13
 "256 colors
 set t_Co=256
 
-" VimClojure stuff
-let vimclojure#HighlightBuiltins=1
-let vimclojure#ParenRainbow=1
-let vimclojure#FuzzyIndent=1
-autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
-
 set nowrap
 
 " Ignore dumb files
@@ -104,10 +95,22 @@ function! TrimWhiteSpace()
   ''
 :endfunction
 
-" autocmd FileWritePre * :call TrimWhiteSpace()
-" autocmd FileAppendPre * :call TrimWhiteSpace()
-" autocmd FilterWritePre * :call TrimWhiteSpace()
-" autocmd BufWritePre * :call TrimWhiteSpace()
+autocmd FileWritePre * :call TrimWhiteSpace()
+autocmd FileAppendPre * :call TrimWhiteSpace()
+autocmd FilterWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :call TrimWhiteSpace()
 
 map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
+
+" rainbow_parenthesis.vim
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.sass-cache$|\.hg$\|\.svn$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
