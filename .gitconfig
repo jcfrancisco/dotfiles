@@ -2,7 +2,7 @@
 	name = Carlo Francisco
 	email = carlo@groupon.com
 [push]
-  default = tracking
+  default = simple
 [color]
   diff = auto
   status = auto

@@ -1,19 +1,22 @@
-alias carlo="ssh -p 30000 *****@xxx.xxx.xxx.xxx" #My web hosting
+alias carlo="ssh -p 30000 carlo@198.199.78.108"
 alias c="cd ~/Sites/jcfrancisco.com/public"
 alias b="git branch | grep \* | sed 's/\*\ //'"
 alias be="bundle exec"
 alias vim="mvim -v"
 alias gclear='git branch | grep -v ^\**\ *"master\|develop\|next-release\|rc"$ | xargs git branch -D'
-alias ppjson="python -mjson.tool"
+alias ppjson="python3.5 -mjson.tool"
 alias s="cd ~/Projects/snaps"
+alias acb="cd ~/Projects/wesacb-api"
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/carlo/pear/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/share/npm/bin"
-export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
+
+export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"
 
 export SD_PORT=4444
 
@@ -36,3 +39,10 @@ fi
 if [ -f ~/.btcrc ]; then
   source ~/.btcrc
 fi
+
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
