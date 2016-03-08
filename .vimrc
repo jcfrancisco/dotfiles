@@ -3,46 +3,53 @@ set nocompatible
 " required for Vundle
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" My Plugins here:
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'isRuslan/vim-es6'
+Plugin 'jbgutierrez/vim-babel'
+Plugin 'mattn/webapi-vim'
+Plugin 'tpope/vim-cucumber'
+Plugin 'godlygeek/tabular'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'altercation/vim-colors-solarized'
+
+" Unused plugins
+" Plugin 'mxw/vim-jsx'
+" Plugin 'plasticboy/vim-markdown'
+" Plugin 'tpope/vim-rails.git'
+" Plugin 'tpope/vim-endwise'
+" Plugin 'tpope/vim-haml'
+" Plugin 'juvenn/mustache.vim'
+" Plugin 'othree/yajs.vim'
+" Plugin 'airblade/vim-gitgutter'
+" Plugin 'wavded/vim-stylus'
+" Plugin 'tpope/vim-classpath'
+
+call vundle#end()
 " required for Vundle
-Bundle 'gmarik/vundle'
+filetype plugin indent on
 
-" My Bundles here:
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
-Bundle 'kien/ctrlp.vim'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
-Bundle 'myusuf3/numbers.vim'
-" Bundle 'airblade/vim-gitgutter'
-Bundle 'wavded/vim-stylus'
-Bundle 'guns/vim-clojure-static'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'tpope/vim-fireplace'
-Bundle 'guns/vim-clojure-highlight'
-" Bundle 'tpope/vim-classpath'
-
-"Colors!
-Bundle 'altercation/vim-colors-solarized'
+" Colors!
 colorscheme solarized
 if has('gui_running')
   set background=light
 else
   set background=dark
 endif
-
-" required for Vundle
-filetype plugin indent on
 
 " Soft tabs, 2 spaces
 set tabstop=2
