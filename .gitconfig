@@ -5,9 +5,9 @@
   status = auto
   branch = auto
 [core]
-	excludesfile = /Users/carlo/.gitignore_global
+  excludesfile = /Users/carlo.francisco/.gitignore_global
   autocrlf = input
-  editor = vim
+	editor = nvim
 [alias]
   c = commit -m
   a = add
@@ -22,7 +22,9 @@
   st = status
   co = checkout
   lg  = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative
-	ci = commit
+  ci = commit
+[diff]
+  compactionHeuristic = true
 [user]
-	name = Carlo Francisco
-	email = carlo.francisco@refinery29.com
+  name = Carlo Francisco
+  email = carlo@jcfrancisco.com

@@ -1,6 +1,7 @@
 Gemfile.carlo
 *.swp
 *.swo
+*.swn
 
 ### OSX ###
 .DS_Store

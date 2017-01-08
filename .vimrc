@@ -1,47 +1,47 @@
+set noswapfile
+
 " Use Vim settings, rather than Vi settings
 set nocompatible
-" required for Vundle
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.local/share/nvim/plugged')
 
-" let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
+" General plugins
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'altercation/vim-colors-solarized'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'myusuf3/numbers.vim'
 
-" My Plugins here:
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'isRuslan/vim-es6'
-Plugin 'jbgutierrez/vim-babel'
-Plugin 'mattn/webapi-vim'
-Plugin 'tpope/vim-cucumber'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'guns/vim-clojure-static'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'tpope/vim-fireplace'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'altercation/vim-colors-solarized'
+" JS
+Plug 'isRuslan/vim-es6'
+Plug 'mattn/webapi-vim' " Needed for vim-babel
+Plug 'jbgutierrez/vim-babel'
+
+" Clojure
+Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
+
+" Etc
+Plug 'tpope/vim-cucumber'
 
 " Unused plugins
-" Plugin 'mxw/vim-jsx'
-" Plugin 'plasticboy/vim-markdown'
-" Plugin 'tpope/vim-rails.git'
-" Plugin 'tpope/vim-endwise'
-" Plugin 'tpope/vim-haml'
-" Plugin 'juvenn/mustache.vim'
-" Plugin 'othree/yajs.vim'
-" Plugin 'airblade/vim-gitgutter'
-" Plugin 'wavded/vim-stylus'
-" Plugin 'tpope/vim-classpath'
+" Plug 'mxw/vim-jsx'
+" Plug 'plasticboy/vim-markdown'
+" Plug 'tpope/vim-rails.git'
+" Plug 'tpope/vim-endwise'
+" Plug 'tpope/vim-haml'
+" Plug 'juvenn/mustache.vim'
+" Plug 'othree/yajs.vim'
+" Plug 'airblade/vim-gitgutter'
+" Plug 'wavded/vim-stylus'
+" Plug 'tpope/vim-classpath'
+" Plug 'kchmck/vim-coffee-script'
+" Plug 'godlygeek/tabular'
 
-call vundle#end()
-" required for Vundle
-filetype plugin indent on
+call plug#end()
 
 " Colors!
 colorscheme solarized
@@ -64,16 +64,16 @@ set showcmd
 
 " Line numbers
 set number
-set numberwidth=5
 set ruler
 
 " Syntax highlighting
 syntax on
 set hlsearch
+set incsearch
 
 " Display extra whitespace
 set list
-set listchars=tab:>-,trail:.
+set listchars="tab:> ,trail:-,nbsp:+"
 
 " case only matters with mixed case expressions
 set ignorecase
