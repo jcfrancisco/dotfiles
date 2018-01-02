@@ -38,7 +38,7 @@ Plug 'tpope/vim-cucumber'
 " Plug 'airblade/vim-gitgutter'
 " Plug 'wavded/vim-stylus'
 " Plug 'tpope/vim-classpath'
-" Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 " Plug 'godlygeek/tabular'
 
 call plug#end()
@@ -93,6 +93,9 @@ set nowrap
 " Ignore dumb files
 set wildignore+=.git,tmp,log,*.png,*.jpg,*.jpeg,*.gif,public/analytic,public/fonts,public/sounds,public/images,public/flash
 
+" Ignore node_modules
+set wildignore+=**/node_modules
+
 " Key mappings
 nnoremap <F3> :NumbersToggle<CR>
 
@@ -117,7 +120,13 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Ignore some folders and files for CtrlP indexing
+" (Note that the wildignore setting above is also respected by CtrlP)
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.sass-cache$|\.hg$\|\.svn$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+" Unset cap of 10,000 files so we find everything
+let g:ctrlp_max_files = 0
+
+set clipboard=unnamedplus
