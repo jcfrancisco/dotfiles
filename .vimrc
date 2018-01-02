@@ -93,9 +93,6 @@ set nowrap
 " Ignore dumb files
 set wildignore+=.git,tmp,log,*.png,*.jpg,*.jpeg,*.gif,public/analytic,public/fonts,public/sounds,public/images,public/flash
 
-" Ignore node_modules
-set wildignore+=**/node_modules
-
 " Key mappings
 nnoremap <F3> :NumbersToggle<CR>
 
@@ -122,7 +119,7 @@ au Syntax * RainbowParenthesesLoadBraces
 " Ignore some folders and files for CtrlP indexing
 " (Note that the wildignore setting above is also respected by CtrlP)
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.sass-cache$|\.hg$\|\.svn$\|\.yardoc\|public$|log\|tmp$',
+  \ 'dir':  '\.git$\|\.sass-cache$|\.hg$\|\.svn$\|\.yardoc\|public$|log\|tmp$\|node_modules$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
 
