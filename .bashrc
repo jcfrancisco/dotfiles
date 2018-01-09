@@ -1,5 +1,4 @@
 alias vim="nvim"
-alias carlo="ssh -p 30000 carlo@198.199.78.108"
 alias c="cd ~/Sites/jcfrancisco.com/public"
 alias b="git branch | grep \* | sed 's/\*\ //'"
 alias be="bundle exec"
@@ -7,6 +6,7 @@ alias gclear='git branch | grep -v ^\**\ *"master\|develop\|next-release\|rc"$ |
 alias ppjson="python3.5 -mjson.tool"
 alias acb="cd ~/Projects/wesacb-api"
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC -I rc'
+alias chrome-canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
 
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/Users/carlo/pear/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
@@ -28,8 +28,8 @@ source $(brew --prefix nvm)/nvm.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # required so that maven uses non-Apple Java
-export JAVA_HOME=$(/usr/libexec/java_home)
-launchctl setenv JAVA_HOME $JAVA_HOME
+#export JAVA_HOME=$(/usr/libexec/java_home)
+#launchctl setenv JAVA_HOME $JAVA_HOME
 
 # R29-specific run commands
 if [ -f ~/.r29rc ]; then
