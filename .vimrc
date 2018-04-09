@@ -13,6 +13,7 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'myusuf3/numbers.vim'
+Plug 'tpope/vim-sleuth'
 
 " JS
 Plug 'isRuslan/vim-es6'
@@ -51,10 +52,11 @@ else
   set background=dark
 endif
 
-" Soft tabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
+" Soft tabs, 2 spaces by default
+" NOTE: `vim-sleuth` can override these if it finds different indentation
+" in the current project
 set expandtab
+set shiftwidth=2
 
 " Always display the status line
 set laststatus=2
