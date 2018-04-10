@@ -21,15 +21,11 @@ export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"
 
 export SD_PORT=4444
 
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# required so that maven uses non-Apple Java
-export JAVA_HOME=$(/usr/libexec/java_home)
-launchctl setenv JAVA_HOME $JAVA_HOME
 
 # R29-specific run commands
 if [ -f ~/.r29rc ]; then
