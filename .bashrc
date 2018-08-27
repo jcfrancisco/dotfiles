@@ -14,9 +14,15 @@ export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:/usr/local/share/npm/bin"
 export PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 export PATH="./bin:$PATH"
+
 # Haskell Stack installs stuff here
 export PATH="$PATH:$HOME/.local/bin"
+
 export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
+
+# PHP 7.1 from Homebrew
+export PATH="/usr/local/opt/php@7.1/bin:$PATH"
+export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
 
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"
 

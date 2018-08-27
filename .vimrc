@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'myusuf3/numbers.vim'
 Plug 'tpope/vim-sleuth'
+Plug 'neomake/neomake'
 
 " JS
 Plug 'isRuslan/vim-es6'
@@ -177,6 +178,11 @@ augroup END
 let g:intero_start_immediately = 0
 
 " Enable type information on hover (when holding cursor at point for ~1 second).
-let g:intero_type_on_hover = 1
+" let g:intero_type_on_hover = 1
 " OPTIONAL: Make the update time shorter, so the type info will trigger faster.
-set updatetime=1000
+" set updatetime=1000
+
+
+" Neomake
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+call neomake#configure#automake('w')
