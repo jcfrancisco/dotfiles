@@ -27,6 +27,7 @@ Plug 'jbgutierrez/vim-babel'
 " Plug 'guns/vim-clojure-highlight'
 
 " Haskell
+Plug 'neovimhaskell/haskell-vim'
 Plug 'parsonsmatt/intero-neovim'
 Plug 'nbouscal/vim-stylish-haskell'
 
