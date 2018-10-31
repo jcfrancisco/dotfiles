@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export EDITOR='nvim'
 export NODE_PATH="$NODE_PATH:/usr/local/lib/node_modules"
 export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/X11/lib/pkgconfig"
 export SD_PORT=4444
@@ -121,3 +122,4 @@ if [ -f ~/.r29rc ]; then
   source ~/.r29rc
 fi
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
