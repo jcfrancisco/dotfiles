@@ -20,6 +20,7 @@ Plug 'neomake/neomake'
 Plug 'isRuslan/vim-es6'
 Plug 'mattn/webapi-vim' " Needed for vim-babel
 Plug 'jbgutierrez/vim-babel'
+Plug 'leafgarland/typescript-vim'
 
 " Clojure
 " Plug 'tpope/vim-fireplace'
@@ -58,11 +59,10 @@ else
   set background=dark
 endif
 
-" Soft tabs, 2 spaces by default
-" NOTE: `vim-sleuth` can override these if it finds different indentation
-" in the current project
-set expandtab
-set shiftwidth=2
+" Indenting defaults (does not override vim-sleuth's indenting detection)
+setglobal expandtab
+setglobal tabstop=2
+setglobal shiftwidth=2
 
 " Always display the status line
 set laststatus=2
