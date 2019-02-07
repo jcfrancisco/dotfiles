@@ -115,11 +115,13 @@ export NVM_DIR="$HOME/.nvm"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 alias b="git branch | grep \* | sed 's/\*\ //'"
-alias gclear='git branch | grep -v ^\**\ *"master\|develop\|next-release\|rc"$ | xargs git branch -D'
-alias ppjson="python3.5 -mjson.tool"
-# R29-specific run commands
-if [ -f ~/.r29rc ]; then
-  source ~/.r29rc
+alias gclear='git branch | grep -v ^"master\|develop\|next-release\|rc\|prod"$ | xargs git branch -D'
+alias ppjson="python3 -mjson.tool"
+
+# DD-specific run commands
+if [ -f ~/.ddrc ]; then
+  source ~/.ddrc
 fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
