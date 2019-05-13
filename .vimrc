@@ -15,6 +15,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'myusuf3/numbers.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'neomake/neomake'
+Plug 'ludovicchabant/vim-gutentags'
 
 " JS
 Plug 'isRuslan/vim-es6'
