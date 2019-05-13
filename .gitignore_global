@@ -28,3 +28,6 @@ Temporary Items
 
 # PHPStorm
 .idea
+
+# ctags
+tags
