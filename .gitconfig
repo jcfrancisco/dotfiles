@@ -5,7 +5,7 @@
   status = auto
   branch = auto
 [core]
-  excludesfile = /Users/carlo.francisco/.gitignore_global
+  excludesfile = ~/.gitignore_global
   autocrlf = input
 	editor = nvim
 [alias]
