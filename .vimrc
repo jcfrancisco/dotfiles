@@ -14,7 +14,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'myusuf3/numbers.vim'
 Plug 'tpope/vim-sleuth'
-Plug 'ludovicchabant/vim-gutentags'
 
 " JS
 Plug 'HerringtonDarkholme/yats.vim'
